@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mail</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;800 &display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100&family=Josefin+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b995eb29b1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="content-container" class="content-container">
+        <div class="header-container">
+            <header class="header">
+                <ul>
+                    <li class="header-title"><strong>Mail</strong></li>
+                </ul>
+                <ul class="header-links">
+                    <li class="header-title"></li>
+                    <li>Usage</li>
+                    <li>Profile</li>
+                    <li>Contact</li>
+                </ul>
+            </header>
+        </div>
+        <div class="hero">
+        <div>
+            <h1 class="hero-h1">Want to send a mail?</h1>
+            <p class="hero-subtitle">Free mail at your finger tips.</p>
+            <p class="hero-subtitle">No Registration required.</p>
+        </div>
+            <img class="hero-img" src="./message sent.png" alt="">
+        </div>
+    </div>
+
+    <div id="sidebar" class="sidebar">
+        <nav id="menu">
+            <header class="sidebar-header">
+                <h2>Menu</h2>
+            </header>
+            <ul>
+                <li><a href="#">Setup</a></li>
+                <li><a href="#">Send</a></li>
+                <li><a href="#">Quick Setup</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </nav>
+        <i onclick="close_sidebar()" class="sidebar-toggle close fas fa-times"></i>
+    </div>
+
+    <i id="open" onclick="open_sidebar()" class="sidebar-toggle open fas fa-arrow-right"></i>
+
+    <script>
+        const sidebar = document.getElementById("sidebar");
+        const content_container = document.getElementById("content-container");
+        const open = document.getElementById("open");
+
+        const close_sidebar = () => {
+            sidebar.style.width = "0";
+            content_container.style.margin = "0";
+            open.style.display = "inline";
+            if (screen.width < 1200) {
+                sidebar.style.width = "0";
+                content_container.style.opacity = "100%";
+                console.log('mobile');
+            } else {
+                sidebar.style.width = "0";
+                content_container.style.marginLeft = "0";
+            }
+        }
+
+        const open_sidebar = () => {
+            // sidebar.style.width = "20%";
+            // content_container.style.marginLeft = "20%";
+            // open.style.display = "none"
+            if (screen.width < 1200) {
+                sidebar.style.width = "80%";
+                content_container.style.opacity = "10%"
+                open.style.display = "none"
+                console.log('mobile');
+            } else {
+                sidebar.style.width = "20%";
+                content_container.style.marginLeft = "20%";
+                open.style.display = "none"
+            }
+        }
+    </script>
+</body>
+</html>

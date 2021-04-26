@@ -1,0 +1,142 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.content-container {
+    margin-left: 20%;
+    transition: margin 0.5s;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1em;
+    border-bottom: #737373 5px solid;
+    width: 90%;
+}
+
+.header-container {
+    display: grid;
+    place-items: center;
+}
+
+.header-title {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.header-links {
+    display: flex;
+    padding-left: 10em;
+}
+
+.header-links li {
+    padding-right: 2em;
+}
+
+ul {
+    list-style: none;
+}
+
+.hero {
+    display: flex;
+    padding: 5em;
+}
+
+.hero-h1 {
+    text-shadow: 1px 0;
+    font-size: 80px;
+    color: #262626;
+}
+
+.hero-subtitle {
+    color: #737373;
+}
+
+.hero-img {
+    width: 40%;
+}
+
+.sidebar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-top: 1em;
+    background-color: #f2f2f2;
+    height: 100%;
+    width: 20%;
+    overflow-x: hidden;
+    transition: width 0.5s;
+}
+
+.sidebar h2 {
+    font-size: 1.2em;
+    border-bottom: #737373 solid 3px;
+    width: 20%;
+    margin: 20px;
+    padding-bottom: 0.5em;
+}
+
+#menu ul > li {
+    margin-bottom: 1em;
+    font-family: 'Source Code Pro', monospace;
+    border-bottom: #d9d9d9 solid 2px;
+    width: 80%;
+}
+
+#menu ul > li > a {
+    text-decoration: none;
+    color: #262626;
+    font-size: small;
+}
+
+.sidebar-toggle {
+    position: absolute;
+    top: 5%;
+    cursor: pointer;
+}
+
+.close {
+    right: 5%;
+}
+
+.open {
+    left: 1%;
+    display: none;
+}
+
+@media (max-width:1200px) {
+    .content-container {
+        margin: 0;
+    }
+
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero-h1 {
+        font-size: xx-large;
+    }
+
+    .hero-img {
+        width: 100%;
+    }
+
+    .header {
+        width: 100%;
+    }
+
+    .sidebar {
+        width: 0;
+    }
+
+    #menu ul > li > a {
+        font-size: medium;
+    }
+
+    .open {
+        display: inline;
+        top: 2em;
+    }
+}
