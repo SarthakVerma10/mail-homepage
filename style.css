@@ -21,11 +21,6 @@ body {
     padding-bottom: 2em;
 }
 
-.header-container {
-    display: grid;
-    place-items: center;
-}
-
 .header-title {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 4vw;
@@ -140,6 +135,7 @@ ul {
     .hero {
         flex-direction: column;
         padding: 1em;
+        padding-top: 4em;
     }
 
     .hero-h1 {
@@ -157,25 +153,29 @@ ul {
 
     .header {
         width: 100%;
+        padding-bottom: 0.5em;
+        padding-top: 0.5em;
     }
 
     .header-title {
-        padding: 1em;
-        margin-left: 40%;
+        margin-left: 25px;
     }
 
     .header ul {
         height: 3em;
+        margin-top: 20px;
     } 
 
     .header-links {
-        margin: 0.2em;
+        margin: 0;
     }
 
     .header-links li {
-        margin-right: 0.5em;
+        margin: 0;
         height: 40%;
         border-radius: 10px;
+        padding: 0;
+        padding-right: 8px;
     }
     
 
