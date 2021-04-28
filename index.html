@@ -24,17 +24,20 @@
                 </ul>
                 <ul class="header-links">
                     <li class="header-title"></li>
+                    <li id="home">Home</li>
                     <li>Usage</li>
                     <li>Profile</li>
                     <li>Contact</li>
                 </ul>
             </header>
         </div>
+        <div class="hero-container">
         <div class="hero">
         <div>
             <h1 class="hero-h1">Want to send a mail?</h1>
             <p class="hero-subtitle">Free mail at your finger tips.</p>
             <p class="hero-subtitle">No Registration required.</p>
+        </div>
         </div>
             <img class="hero-img" src="./message sent.png" alt="">
         </div>
@@ -61,6 +64,12 @@
         const sidebar = document.getElementById("sidebar");
         const content_container = document.getElementById("content-container");
         const open = document.getElementById("open");
+
+        console.log(window.location.pathname);
+
+        if (window.location.pathname === "/index.html") {
+            document.getElementById("home").classList.add("currentItem")
+        }
 
         const close_sidebar = () => {
             sidebar.style.width = "0";

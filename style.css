@@ -1,7 +1,10 @@
-body {
-    font-family: 'Open Sans', sans-serif;
+* {
     margin: 0;
     padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
 }
 
 .content-container {
@@ -12,9 +15,10 @@ body {
 .header {
     display: flex;
     justify-content: space-between;
-    padding-top: 1em;
     border-bottom: #737373 5px solid;
     width: 90%;
+    padding-top: 2em;
+    padding-bottom: 2em;
 }
 
 .header-container {
@@ -24,15 +28,24 @@ body {
 
 .header-title {
     font-family: 'Josefin Sans', sans-serif;
+    font-size: 4vw;
 }
 
 .header-links {
     display: flex;
-    padding-left: 10em;
+    margin-left: 10em;
+}
+
+.header ul {
+    height: 3em;
 }
 
 .header-links li {
-    padding-right: 2em;
+    margin-right: 2em;
+    padding: 1em;
+    border-radius: 10px;
+    height: 0.7em;
+    margin: 0.2em;
 }
 
 ul {
@@ -48,10 +61,12 @@ ul {
     text-shadow: 1px 0;
     font-size: 80px;
     color: #262626;
+    margin-top: 2em;
 }
 
 .hero-subtitle {
     color: #737373;
+    line-height: 2em;
 }
 
 .hero-img {
@@ -83,6 +98,7 @@ ul {
     font-family: 'Source Code Pro', monospace;
     border-bottom: #d9d9d9 solid 2px;
     width: 80%;
+    margin-left: 5%;
 }
 
 #menu ul > li > a {
@@ -106,17 +122,33 @@ ul {
     display: none;
 }
 
+.currentItem {
+    background-color: #737373;
+    color: #d9d9d9;
+}
+
 @media (max-width:1200px) {
     .content-container {
         margin: 0;
     }
 
+    .hero-container {
+        display: grid;
+        place-items: center;
+    } 
+
     .hero {
         flex-direction: column;
+        padding: 1em;
     }
 
     .hero-h1 {
         font-size: xx-large;
+        margin-top: 0;
+    }
+
+    .hero-subtitle {
+        text-align: center;
     }
 
     .hero-img {
@@ -126,6 +158,26 @@ ul {
     .header {
         width: 100%;
     }
+
+    .header-title {
+        padding: 1em;
+        margin-left: 40%;
+    }
+
+    .header ul {
+        height: 3em;
+    } 
+
+    .header-links {
+        margin: 0.2em;
+    }
+
+    .header-links li {
+        margin-right: 0.5em;
+        height: 40%;
+        border-radius: 10px;
+    }
+    
 
     .sidebar {
         width: 0;
